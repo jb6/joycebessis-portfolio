@@ -1,78 +1,155 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Joyce Bessis — Applied AI Engineer. LLM applications, AI evaluation, red teaming, RAG, automation and production-oriented systems." />
-  <meta name="robots" content="noindex,nofollow" />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Joyce Bessis — Applied AI Engineer</title>
-  <style>
-    :root{--bg:#080b12;--panel:#101727;--text:#f4f7fb;--muted:#a7b1c2;--line:rgba(255,255,255,.09);--accent:#8b7cff;--accent2:#4fd1c5;--max:1160px;--radius:24px;--shadow:0 24px 80px rgba(0,0,0,.35)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--text);background:radial-gradient(900px 500px at 15% -5%,rgba(139,124,255,.20),transparent 60%),radial-gradient(700px 450px at 95% 15%,rgba(79,209,197,.10),transparent 60%),linear-gradient(180deg,var(--bg),#090d17 48%,#080b12);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;overflow-x:hidden}
-    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
-    .nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:rgba(8,11,18,.68);border-bottom:1px solid rgba(255,255,255,.05)}
-    .navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:850;letter-spacing:-.03em;font-size:18px}.brand span{color:var(--accent)}
-    .links{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}.pill{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.04);font-weight:700;color:#fff}
-    .hero{padding:108px 0 74px;position:relative}.gridglow{position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 76%)}
-    .hero-content{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:54px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#dcd8ff;border:1px solid rgba(139,124,255,.34);background:rgba(139,124,255,.10);padding:8px 12px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 20px var(--accent2)}
-    h1{margin:20px 0 22px;font-size:clamp(52px,7vw,92px);line-height:.95;letter-spacing:-.06em;max-width:900px}.gradient{background:linear-gradient(90deg,#fff 20%,#b7adff 62%,#78e0d8);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:760px;color:var(--muted);font-size:clamp(18px,2vw,23px);margin:0 0 28px}
-    .meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 32px}.meta span{border:1px solid var(--line);background:rgba(255,255,255,.035);padding:8px 11px;border-radius:12px;color:#c7cfdb;font-size:13px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{min-height:48px;padding:0 18px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);font-weight:800;font-size:14px;background:rgba(255,255,255,.04);transition:.2s ease}.btn.primary{background:#fff;color:#0b1020;border-color:#fff}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.22)}
-    .hero-card{border:1px solid rgba(255,255,255,.11);background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border-radius:30px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-card:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-80px;top:-80px;background:radial-gradient(circle,rgba(139,124,255,.28),transparent 68%)}.status{font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.08em;color:#98f0e9}.hero-card h3{font-size:28px;line-height:1.12;letter-spacing:-.035em;margin:14px 0 12px;position:relative}.hero-card p{color:var(--muted);margin:0 0 20px;position:relative}.arch{border:1px solid var(--line);border-radius:18px;padding:16px;background:rgba(0,0,0,.16);position:relative}.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:#dbe2ec}.flow b{background:rgba(255,255,255,.06);border:1px solid var(--line);padding:7px 9px;border-radius:9px}.arrow{color:#7f8aa0}
-    section{padding:72px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:28px}.section-title h2{font-size:clamp(34px,4.4vw,52px);line-height:1;letter-spacing:-.045em;margin:0}.section-title p{max-width:560px;color:var(--muted);margin:0}
-    .projects{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));border-radius:var(--radius);padding:24px;min-height:310px;display:flex;flex-direction:column;position:relative;overflow:hidden}.card.big{grid-column:span 7}.card.small{grid-column:span 5}.label{font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.08em;color:#cfc9ff;margin-bottom:46px}.label.teal{color:#8ee6df}.label.gray{color:#aab3c2}.card h3{font-size:27px;line-height:1.12;letter-spacing:-.035em;margin:0 0 12px}.card p{color:var(--muted);margin:0 0 20px;max-width:620px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}.chips span{font-size:11px;color:#cbd3df;border:1px solid var(--line);background:rgba(255,255,255,.035);padding:7px 9px;border-radius:999px}details{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}summary{cursor:pointer;color:#f2f4f8;font-weight:800;font-size:13px}details ul{color:var(--muted);padding-left:18px;margin:12px 0 0;font-size:13px}
-    .proofs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.proof{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:20px;padding:20px;min-height:190px}.num{font-size:12px;color:#8ee6df;font-weight:850;margin-bottom:38px}.proof h3{font-size:20px;letter-spacing:-.025em;margin:0 0 8px}.proof p{color:var(--muted);font-size:14px;margin:0}
-    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:rgba(255,255,255,.025)}.step{padding:24px;border-right:1px solid var(--line);min-height:190px}.step:last-child{border-right:0}.step b{display:block;color:#cfc9ff;font-size:12px;margin-bottom:38px;text-transform:uppercase;letter-spacing:.08em}.step h3{margin:0 0 8px;font-size:21px}.step p{margin:0;color:var(--muted);font-size:14px}
-    .experience{display:grid;grid-template-columns:.72fr 1.28fr;gap:22px;border:1px solid var(--line);border-radius:28px;padding:30px;background:rgba(255,255,255,.025)}.experience h2{font-size:42px;letter-spacing:-.045em;margin:0}.xp-list{display:grid;gap:14px}.xp{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}.xp:last-child{border-bottom:0}.xp .when{color:#8d98aa;font-size:13px}.xp h3{margin:0 0 5px;font-size:18px}.xp p{margin:0;color:var(--muted);font-size:14px}
-    .contact{border:1px solid rgba(139,124,255,.26);background:linear-gradient(140deg,rgba(139,124,255,.12),rgba(79,209,197,.06));border-radius:30px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:24px}.contact h2{font-size:42px;line-height:1;letter-spacing:-.045em;margin:0 0 12px}.contact p{color:var(--muted);margin:0;max-width:650px}footer{padding:40px 0 54px;color:#7f8a9d;font-size:13px}.foot{display:flex;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding-top:22px}.reveal{opacity:0;transform:translateY(14px);transition:.6s ease}.reveal.show{opacity:1;transform:none}
-    @media(max-width:900px){.links a:not(.pill){display:none}.hero{padding-top:76px}.hero-content{grid-template-columns:1fr}.card.big,.card.small{grid-column:span 12}.proofs{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step{border-bottom:1px solid var(--line)}.step:nth-child(3),.step:nth-child(4){border-bottom:0}.experience{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}}
-    @media(max-width:600px){.wrap{width:min(var(--max),calc(100% - 24px))}.navin{height:64px}h1{font-size:52px}.hero-card{padding:22px}section{padding:54px 0}.section-title{align-items:flex-start;flex-direction:column}.proofs{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.step{border-right:0!important;border-bottom:1px solid var(--line)!important}.step:last-child{border-bottom:0!important}.xp{grid-template-columns:1fr;gap:6px}.contact{padding:28px}.contact h2{font-size:34px}.foot{flex-direction:column}}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Joyce Bessis — Independent Applied AI Engineer. AI systems, agents, evaluation, reliability and production-oriented applications.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#070913">
+  <title>Joyce Bessis — Independent Applied AI Engineer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header class="nav"><div class="wrap navin"><a class="brand" href="#">Joyce<span>.</span>Bessis</a><nav class="links"><a href="#projects">Projects</a><a href="#proof">Capabilities</a><a href="#experience">Background</a><a class="pill" href="mailto:joyce.bessis@gmail.com">Contact</a></nav></div></header>
+<body data-page="home">
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="name" href="index.html">Joyce Bessis</a>
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="experience.html" data-nav="experience">Experience</a>
+      <a href="skills.html" data-nav="skills">Skills</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" aria-label="Languages">
+        <a class="active" href="index.html">EN</a> &nbsp;|&nbsp;
+        <a href="#" data-lang-pending="French">FR</a> &nbsp;|&nbsp;
+        <a href="#" data-lang-pending="Hebrew">HE</a>
+      </div>
+      <img class="logo" src="assets/jy6-logo-purple.png" alt="JY6 logo">
+    </div>
+  </div>
+</header>
+
 <main>
-<section class="hero"><div class="gridglow"></div><div class="wrap hero-content">
-<div><div class="eyebrow"><span class="dot"></span> Applied AI Engineer · NLP · LLM Systems</div><h1><span class="gradient">I turn real problems into reliable AI products.</span></h1><p class="lead">LLM applications, intelligent automation, structured data workflows, evaluation and production-minded AI systems.</p><div class="meta"><span>Computer Engineering</span><span>NLP / Siri experience</span><span>French · English · Hebrew</span><span>Python · APIs · SQL</span></div><div class="actions"><a class="btn primary" href="#projects">Explore my work</a><a class="btn" href="mailto:joyce.bessis@gmail.com">Let’s talk</a></div></div>
-<aside class="hero-card"><div class="status">Building now</div><h3>WhatsApp AI Intake System</h3><p>A Hebrew-language, production-oriented intake workflow that captures structured information, validates fields, stores data in PostgreSQL and hands off to a human when needed.</p><div class="arch"><div class="flow"><b>WhatsApp</b><span class="arrow">→</span><b>FastAPI</b><span class="arrow">→</span><b>Structured extraction</b><span class="arrow">→</span><b>Validation</b><span class="arrow">→</span><b>PostgreSQL</b><span class="arrow">→</span><b>Human handoff</b></div></div></aside>
-</div></section>
+  <section class="hero">
+    <div class="hero-stars"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <h1>Turning AI into<br><span>real-world solutions</span></h1>
+        <p>I design, build and productionize AI systems — from LLM agents and RAG pipelines to secure, reliable and user-friendly applications.</p>
+        <a class="cta" href="projects.html">View my projects <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="planet-wrap">
+          <div class="ring"></div>
+          <div class="planet"></div>
+          <div class="horizon"></div>
+          <img class="logo-water" src="assets/jy6-logo-purple.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="projects"><div class="wrap"><div class="section-title reveal"><h2>Selected systems</h2><p>Real and planned proof projects focused on the skills expected in production Applied AI roles: engineering, evaluation, security, reliability and controlled agent behavior.</p></div><div class="projects">
-<article class="card big reveal"><div class="label">01 · Flagship project · In progress</div><h3>WhatsApp AI Intake System</h3><p>A short, controlled Hebrew intake flow for a real-world professional workflow: required questions, structured fields, validation, PostgreSQL persistence and automatic human escalation when needed.</p><div class="chips"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Webhooks</span><span>Structured output</span><span>Human-in-the-loop</span><span>Docker-ready</span></div><details><summary>What this project proves</summary><ul><li>API/webhook integration and conversation state</li><li>Structured extraction instead of unconstrained free-form generation</li><li>Validation, fallbacks, retries and safe handoff</li><li>Portable architecture designed for a later Google Cloud migration</li></ul></details></article>
+  <section class="cap-strip">
+    <div class="wrap cap-grid">
+      <div class="cap">
+        <div class="cap-icon">◇</div>
+        <div><b>AI Agents</b><span>From ideas to production</span></div>
+      </div>
+      <div class="cap">
+        <div class="cap-icon">▥</div>
+        <div><b>Evaluation</b><span>Quality, safety and real-world performance</span></div>
+      </div>
+      <div class="cap">
+        <div class="cap-icon">✓</div>
+        <div><b>Reliability</b><span>Secure, scalable and user-friendly systems</span></div>
+      </div>
+    </div>
+  </section>
 
-<article class="card small reveal"><div class="label teal">02 · Planned lab · AI security</div><h3>AI Red Team Lab</h3><p>Adversarial testing for LLM and agentic systems: prompt injection, indirect injection, tool abuse, data leakage, jailbreaks and security regression testing.</p><div class="chips"><span>Prompt injection</span><span>Tool safety</span><span>Attack suites</span><span>Mitigations</span><span>Re-tests</span></div></article>
+  <section class="featured">
+    <div class="wrap featured-grid">
+      <div class="feature-copy">
+        <div class="kicker">Featured project</div>
+        <h2>WhatsApp AI Intake System</h2>
+        <p>An automated intake workflow for car accident reports, built with FastAPI, PostgreSQL and an LLM agent. It collects key information, validates data and routes cases to a human when needed — fast, reliable and ready for production.</p>
+        <a class="outline-btn" href="shami.html">View project details <span>→</span></a>
+      </div>
+      <div class="phone-wrap">
+<div class="phone" aria-label="Shami WhatsApp AI intake conversation mockup">
+  <div class="screen">
+    <div class="chat-head">
+      <div class="avatar">S</div>
+      <div><b>Shami</b><span>AI accident assistant</span></div>
+    </div>
+    <div class="chat-body">
+      <div class="bubble bot">Hi, I'm Shami, your AI accident assistant. I'll guide you through a few quick steps and create a structured case draft.</div>
+      <div class="bubble bot">What type of accident was it?</div>
+      <div class="quick"><span>Rear-end</span><span>Side collision</span><span>Hit & run</span></div>
+      <div class="bubble user">Rear-end</div>
+      <div class="bubble bot">When and where did it happen?</div>
+      <div class="bubble user">Today · 17:30 · Haifa</div>
+      <div class="bubble bot">Thanks — required fields validated. I've prepared a case draft and flagged photos as the next step.</div>
+      <div class="summary">
+        <div class="summary-top"><b>AI Case Draft</b><span class="badge">Ready for review</span></div>
+        <dl>
+          <dt>Type</dt><dd>Rear-end collision</dd>
+          <dt>Time</dt><dd>Today · 17:30</dd>
+          <dt>Location</dt><dd>Haifa</dd>
+          <dt>Next</dt><dd>Upload photos</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="chat-input">Message Shami…</div>
+  </div>
+</div>
+</div>
+      <div class="project-points">
+        <div class="point"><div class="point-icon">≡</div><div><h3>Natural conversation flow</h3><p>Short, structured interactions that keep the user moving.</p></div></div>
+        <div class="point"><div class="point-icon">▣</div><div><h3>Structured data & validation</h3><p>Turns responses into validated fields instead of free-form chat.</p></div></div>
+        <div class="point"><div class="point-icon">↗</div><div><h3>Human handoff</h3><p>Routes complex or incomplete cases to a person when needed.</p></div></div>
+      </div>
+    </div>
+  </section>
 
-<article class="card small reveal"><div class="label gray">03 · Planned lab · AI quality</div><h3>LLM Evaluation Lab</h3><p>A reproducible evaluation harness for extraction quality, prompt/model comparisons, regressions, latency, cost and failure taxonomy.</p><div class="chips"><span>Golden sets</span><span>Regression testing</span><span>Latency</span><span>Cost</span><span>Failure analysis</span></div></article>
-
-<article class="card big reveal"><div class="label">04 · Planned lab · Agentic AI</div><h3>Agentic AI / MCP Sandbox</h3><p>An agent that uses multiple tools and APIs, maintains state, requests approval before sensitive actions and recovers safely from tool or service failures.</p><div class="chips"><span>Agents</span><span>MCP</span><span>Tool use</span><span>State</span><span>Human approval</span><span>Error recovery</span></div></article>
-
-<article class="card big reveal"><div class="label teal">05 · Planned lab · Retrieval</div><h3>Production RAG System</h3><p>A grounded retrieval system designed around retrieval quality, citations, evaluation, access control and predictable failure behavior — not just a chat interface.</p><div class="chips"><span>RAG</span><span>Embeddings</span><span>Retrieval evals</span><span>Citations</span><span>Guardrails</span></div></article>
-
-<article class="card small reveal"><div class="label gray">06 · Planned lab · Reliability</div><h3>AI Reliability / Failure Lab</h3><p>Deliberately breaks APIs and workflows to demonstrate retries, idempotence, duplicate handling, timeouts, logs and recovery.</p><div class="chips"><span>Retries</span><span>Idempotence</span><span>Timeouts</span><span>Observability</span><span>Recovery</span></div></article>
-</div></div></section>
-
-<section id="proof"><div class="wrap"><div class="section-title reveal"><h2>What I can prove</h2><p>The portfolio is organized around evidence: systems, architecture, tests, decisions and measured outcomes — never invented metrics.</p></div><div class="proofs">
-<div class="proof reveal"><div class="num">01</div><h3>LLM application engineering</h3><p>Structured outputs, prompt design, constrained workflows and safe fallbacks.</p></div>
-<div class="proof reveal"><div class="num">02</div><h3>Backend + data</h3><p>FastAPI, REST/webhooks, PostgreSQL schemas, validation and stateful workflows.</p></div>
-<div class="proof reveal"><div class="num">03</div><h3>Evals + reliability</h3><p>Golden sets, regressions, retries, idempotence, error handling and recovery.</p></div>
-<div class="proof reveal"><div class="num">04</div><h3>AI security</h3><p>Adversarial testing, tool safety, attack/mitigation cycles and security regression tests.</p></div>
-</div></div></section>
-
-<section><div class="wrap"><div class="section-title reveal"><h2>How I build</h2><p>Clear scope first, then engineering, evaluation and deployment — with the human workflow always visible.</p></div><div class="timeline reveal">
-<div class="step"><b>01 · Frame</b><h3>Define the job</h3><p>Clarify the user, workflow, data, constraints and failure cases before adding AI.</p></div>
-<div class="step"><b>02 · Build</b><h3>Make it work</h3><p>APIs, schemas, state, storage and a controlled end-to-end path.</p></div>
-<div class="step"><b>03 · Evaluate</b><h3>Measure quality</h3><p>Test sets, accuracy, latency, cost, edge cases and regression behavior.</p></div>
-<div class="step"><b>04 · Ship</b><h3>Design for production</h3><p>Logging, fallbacks, privacy, deployment, observability and human override.</p></div>
-</div></div></section>
-
-<section id="experience"><div class="wrap experience reveal"><div><h2>Background</h2></div><div class="xp-list">
-<div class="xp"><div class="when">NLP / Product AI</div><div><h3>Apple — Siri</h3><p>Experience working on language technology and NLP in a production product environment.</p></div></div>
-<div class="xp"><div class="when">Education</div><div><h3>Computer Engineering — Technion</h3><p>Technical foundation across software, systems and engineering problem solving.</p></div></div>
-<div class="xp"><div class="when">Current focus</div><div><h3>Applied AI systems</h3><p>Building proof projects around LLM applications, evaluation, AI security, agents, RAG, automation and production-oriented backend systems.</p></div></div>
-</div></div></section>
-
-<section><div class="wrap contact reveal"><div><h2>Let’s build useful AI.</h2><p>I’m interested in Applied AI and LLM engineering roles where production quality, evaluation, security and product thinking matter as much as model capability.</p></div><a class="btn primary" href="mailto:joyce.bessis@gmail.com">joyce.bessis@gmail.com</a></div></section>
+  <section class="selected">
+    <div class="wrap">
+      <div class="selected-head">
+        <div class="kicker">Selected projects</div>
+        <a href="projects.html">View all projects →</a>
+      </div>
+      <div class="cards">
+        <a class="project-card" href="projects.html#red-team">
+          <div class="card-icon">✓</div>
+          <h3>AI Red Team Lab</h3>
+          <p>Adversarial testing and safety evaluations for LLM applications and agents.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a class="project-card" href="projects.html#evals">
+          <div class="card-icon">▥</div>
+          <h3>LLM Evaluation Lab</h3>
+          <p>Automated testing, measurable quality, benchmarking and monitoring.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a class="project-card" href="projects.html#agentic">
+          <div class="card-icon">◇</div>
+          <h3>Agentic AI / MCP Sandbox</h3>
+          <p>Tool use, orchestration and real-world agent workflow design.</p>
+          <span class="card-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 Joyce Bessis</span><span>Applied AI · LLM Evaluation · AI Security</span></div></footer>
-<script>const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
-</body></html>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>© 2026 Joyce Bessis</span>
+    <span>Independent Applied AI Engineer · AI systems · Evaluation · Reliability</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

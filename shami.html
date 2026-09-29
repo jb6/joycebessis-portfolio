@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>WhatsApp AI Intake System — Joyce Bessis</title><link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="projects">
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="name" href="index.html">Joyce Bessis</a>
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="experience.html" data-nav="experience">Experience</a>
+      <a href="skills.html" data-nav="skills">Skills</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" aria-label="Languages">
+        <a class="active" href="index.html">EN</a> &nbsp;|&nbsp;
+        <a href="#" data-lang-pending="French">FR</a> &nbsp;|&nbsp;
+        <a href="#" data-lang-pending="Hebrew">HE</a>
+      </div>
+      <img class="logo" src="assets/jy6-logo-purple.png" alt="JY6 logo">
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero"><div class="wrap">
+    <div class="kicker">Case study · in progress</div>
+    <h1>WhatsApp AI<br>Intake System.</h1>
+    <p>A short, controlled intake experience for a real professional-services workflow — designed to collect structured information, validate it, store it reliably and escalate to a human when needed.</p>
+  </div></section>
+
+  <section class="content-section"><div class="wrap grid-2">
+    <article class="panel">
+      <h2>Product goal</h2>
+      <p>Keep the client-side interaction short — roughly 5 to 7 interactions — while making the workflow behind it robust. Most responses are structured buttons or fields, with very limited free text.</p>
+      <div class="tag-row"><span class="tag">Short flow</span><span class="tag">Structured intake</span><span class="tag">Human handoff</span></div>
+    </article>
+    <article class="panel">
+      <h2>Architecture</h2>
+      <p>Python/FastAPI service, PostgreSQL from day one, environment-based configuration, separated storage layer and a Docker-friendly structure designed to migrate to Google Cloud without rewriting the product.</p>
+      <div class="tag-row"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker-ready</span><span class="tag">Cloud-ready</span></div>
+    </article>
+    <article class="panel">
+      <h2>AI role</h2>
+      <p>The AI layer is used where it adds value: extracting structured information from limited natural-language inputs, checking completeness and producing a clean case draft. Deterministic business rules remain outside the model.</p>
+      <div class="tag-row"><span class="tag">Structured outputs</span><span class="tag">Function calling</span><span class="tag">Validation</span></div>
+    </article>
+    <article class="panel">
+      <h2>Reliability & safety</h2>
+      <p>The system is being designed around validation, fallbacks, retries, explicit conversation state and a safe human handoff rather than allowing an unconstrained chatbot to improvise.</p>
+      <div class="tag-row"><span class="tag">Fallbacks</span><span class="tag">Retries</span><span class="tag">State</span><span class="tag">Human review</span></div>
+    </article>
+  </div></section>
+
+  <section class="content-section"><div class="wrap" style="display:grid;place-items:center">
+    
+<div class="phone" aria-label="Shami WhatsApp AI intake conversation mockup">
+  <div class="screen">
+    <div class="chat-head">
+      <div class="avatar">S</div>
+      <div><b>Shami</b><span>AI accident assistant</span></div>
+    </div>
+    <div class="chat-body">
+      <div class="bubble bot">Hi, I'm Shami, your AI accident assistant. I'll guide you through a few quick steps and create a structured case draft.</div>
+      <div class="bubble bot">What type of accident was it?</div>
+      <div class="quick"><span>Rear-end</span><span>Side collision</span><span>Hit & run</span></div>
+      <div class="bubble user">Rear-end</div>
+      <div class="bubble bot">When and where did it happen?</div>
+      <div class="bubble user">Today · 17:30 · Haifa</div>
+      <div class="bubble bot">Thanks — required fields validated. I've prepared a case draft and flagged photos as the next step.</div>
+      <div class="summary">
+        <div class="summary-top"><b>AI Case Draft</b><span class="badge">Ready for review</span></div>
+        <dl>
+          <dt>Type</dt><dd>Rear-end collision</dd>
+          <dt>Time</dt><dd>Today · 17:30</dd>
+          <dt>Location</dt><dd>Haifa</dd>
+          <dt>Next</dt><dd>Upload photos</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="chat-input">Message Shami…</div>
+  </div>
+</div>
+
+  </div></section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>© 2026 Joyce Bessis</span>
+    <span>Independent Applied AI Engineer · AI systems · Evaluation · Reliability</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
