@@ -28,7 +28,7 @@ The Home page intentionally shows:
 - no invented performance metrics.
 
 ## Versioning
-Next edits should be saved as `v7.1`, `v7.2`, etc., with the date in the filename.
+Next edits should be saved as `v1.3`, or  `v2.0` etc., with the date in the filename.
 
 
 ## v1.2 change
