@@ -2,91 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Applied AI engineering projects by Joyce Bessis — production workflows, evaluation, safety, agents and reliability.">
   <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#070913">
   <title>Projects — Joyce Bessis</title><link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="projects">
-
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="name" href="index.html">Joyce Bessis</a>
+    <a class="name brand-lockup" href="index.html"><span class="brand-name">Joyce Bessis</span><img class="header-logo" src="assets/jy6-logo-purple.png" alt="JY6 logo"></a>
     <nav class="menu" aria-label="Primary">
       <a href="index.html" data-nav="home">Home</a>
       <a href="projects.html" data-nav="projects">Projects</a>
       <a href="experience.html" data-nav="experience">Experience</a>
       <a href="skills.html" data-nav="skills">Skills</a>
+      <a href="creative-lab.html" data-nav="creative">Creative Lab</a>
     </nav>
-    <div class="nav-right">
-      <div class="lang" aria-label="Languages">
-        <a class="active" href="index.html">EN</a> &nbsp;|&nbsp;
-        <a href="#" data-lang-pending="French">FR</a> &nbsp;|&nbsp;
-        <a href="#" data-lang-pending="Hebrew">HE</a>
-      </div>
-      <img class="logo" src="assets/jy6-logo-purple.png" alt="JY6 logo">
-    </div>
+    <div class="nav-right"></div>
   </div>
 </header>
-
 <main>
-  <section class="page-hero"><div class="wrap">
-    <div class="kicker">Projects</div>
-    <h1>AI systems built around<br>real workflows.</h1>
-    <p>My portfolio focuses on production-oriented AI: constrained workflows, structured outputs, evaluation, safety, observability and reliable human handoff.</p>
-  </div></section>
 
-  <section class="content-section"><div class="wrap grid-2">
-    <article class="panel">
-      <div class="kicker">In progress · flagship</div>
-      <h2>WhatsApp AI Intake System</h2>
-      <p>A real-world intake assistant for a professional services workflow. Short interactions, structured data capture, validation, PostgreSQL persistence, API/webhook integration and safe human escalation.</p>
-      <div class="tag-row"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Structured outputs</span><span class="tag">Human-in-the-loop</span></div>
-      <p><a class="outline-btn" href="shami.html">Open case study →</a></p>
-    </article>
+<section class="page-hero pro-hero"><div class="wrap pro-hero-grid">
+  <div><div class="kicker">Projects</div><h1>Production-minded AI,<br>one system at a time.</h1></div>
+  <p>I’m building a focused portfolio around the parts of AI engineering that matter in production: reliable workflows, structured outputs, evaluation, safety, observability and human oversight.</p>
+</div></section>
 
-    <article class="panel" id="red-team">
-      <div class="kicker">Planned lab</div>
-      <h2>AI Red Team Lab</h2>
-      <p>Adversarial testing for LLM and agentic systems: prompt injection, indirect injection, tool misuse, data leakage, multilingual attacks and security regression tests.</p>
-      <div class="tag-row"><span class="tag">Security</span><span class="tag">Adversarial AI</span><span class="tag">Guardrails</span><span class="tag">Regression tests</span></div>
-    </article>
+<section class="pro-section"><div class="wrap">
+  <div class="pro-section-head"><div><div class="kicker">Flagship · in progress</div><h2>Real workflow, real constraints.</h2></div><p>One project is being built end-to-end first. The rest of the portfolio is intentionally staged so every project adds a different production skill.</p></div>
+  <a class="flagship-card" href="shami.html">
+    <div class="flagship-copy"><span class="status-pill status-live">In progress</span><h3>WhatsApp AI Intake System</h3><p>A vehicle-appraisal intake workflow that combines structured fields, free-text understanding, validation, media collection, PostgreSQL, human review and a production-minded backend.</p><div class="tag-row"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">State machine</span><span class="tag">Structured outputs</span><span class="tag">Human-in-the-loop</span></div><span class="project-open">Read the case study →</span></div>
+    <div class="flagship-proof"><div><small>Customer layer</small><strong>Structured + unstructured intake</strong></div><div><small>AI layer</small><strong>Schema-constrained enrichment</strong></div><div><small>Operations</small><strong>Dashboard + human review</strong></div></div>
+  </a>
+</div></section>
 
-    <article class="panel" id="evals">
-      <div class="kicker">Planned lab</div>
-      <h2>LLM Evaluation Lab</h2>
-      <p>A reproducible evaluation harness with golden sets, model/prompt comparison, structured-output checks, latency/cost tracking and failure taxonomy.</p>
-      <div class="tag-row"><span class="tag">LLM-as-judge</span><span class="tag">Golden sets</span><span class="tag">Observability</span><span class="tag">Quality metrics</span></div>
-    </article>
-
-    <article class="panel" id="agentic">
-      <div class="kicker">Planned lab</div>
-      <h2>Agentic AI / MCP Sandbox</h2>
-      <p>An agent that uses tools and APIs, keeps state, asks for approval before sensitive actions and recovers from tool or model failures.</p>
-      <div class="tag-row"><span class="tag">Agents</span><span class="tag">Function calling</span><span class="tag">MCP</span><span class="tag">Tool use</span></div>
-    </article>
-
-    <article class="panel">
-      <div class="kicker">Roadmap</div>
-      <h2>Production RAG System</h2>
-      <p>Grounded retrieval with chunking, reranking, citations, structured responses and evaluation focused on retrieval quality and factual support.</p>
-      <div class="tag-row"><span class="tag">RAG</span><span class="tag">Retrieval</span><span class="tag">Embeddings</span><span class="tag">Citations</span></div>
-    </article>
-
-    <article class="panel">
-      <div class="kicker">Roadmap</div>
-      <h2>AI Reliability / Failure Lab</h2>
-      <p>Deliberately inject failures — timeouts, repeated events, unavailable APIs and invalid outputs — then test retries, idempotence, fallbacks and recovery.</p>
-      <div class="tag-row"><span class="tag">Reliability</span><span class="tag">Failure analysis</span><span class="tag">Observability</span><span class="tag">Recovery</span></div>
-    </article>
-  </div></section>
-</main>
-
-<footer class="footer">
-  <div class="wrap footer-in">
-    <span>© 2026 Joyce Bessis</span>
-    <span>Independent Applied AI Engineer · AI systems · Evaluation · Reliability</span>
+<section class="pro-section pro-section-muted"><div class="wrap">
+  <div class="pro-section-head"><div><div class="kicker">Building next</div><h2>Projects designed to prove specific skills.</h2></div><p>No filler demos. Each lab is scoped around a production capability I want to test, measure and document.</p></div>
+  <div class="pro-project-grid">
+    <a class="pro-project-card" href="llm-evaluation.html"><span class="status-pill">Planned</span><h3>LLM Evaluation Lab</h3><p>Golden sets, LLM-as-judge, structured-output checks, prompt/model comparisons and failure taxonomy.</p><div class="mini-proof">Proves → measurable AI quality</div></a>
+    <a class="pro-project-card" href="red-team.html"><span class="status-pill">Planned</span><h3>AI Red Team Lab</h3><p>Prompt injection, tool abuse, data leakage, multilingual attacks and regression testing for guardrails.</p><div class="mini-proof">Proves → AI safety & adversarial testing</div></a>
+    <a class="pro-project-card" href="agentic-ai.html"><span class="status-pill">Planned</span><h3>Agentic AI / MCP Sandbox</h3><p>Tool use, approval gates, state, retries and recovery for a constrained agent workflow.</p><div class="mini-proof">Proves → agent reliability & orchestration</div></a>
   </div>
-</footer>
+</div></section>
 
+<section class="pro-section"><div class="wrap">
+  <div class="pro-section-head"><div><div class="kicker">Roadmap</div><h2>After the core portfolio.</h2></div><p>These come later, after the first projects have real demos and evidence.</p></div>
+  <div class="roadmap-row">
+    <a href="production-rag.html"><strong>Production RAG System</strong><span>Grounding, retrieval quality, citations and evals →</span></a>
+    <a href="reliability-lab.html"><strong>AI Reliability / Failure Lab</strong><span>Timeouts, duplicates, retries, invalid outputs and recovery →</span></a>
+  </div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap footer-in">
+  <span>© 2026 Joyce Bessis · <a href="https://github.com/jb6" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:joyce.bessis@gmail.com">Email</a></span>
+  <span>Independent Applied AI Engineer · AI systems · Evaluation · Reliability</span>
+</div></footer>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>

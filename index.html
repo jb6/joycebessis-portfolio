@@ -13,22 +13,16 @@
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="name" href="index.html">Joyce Bessis</a>
+    <a class="name brand-lockup" href="index.html"><span class="brand-name">Joyce Bessis</span><img class="header-logo" src="assets/jy6-logo-purple.png" alt="JY6 logo"></a>
     <nav class="menu" aria-label="Primary">
       <a href="index.html" data-nav="home">Home</a>
       <a href="projects.html" data-nav="projects">Projects</a>
       <a href="experience.html" data-nav="experience">Experience</a>
       <a href="skills.html" data-nav="skills">Skills</a>
+      <a href="creative-lab.html" data-nav="creative">Creative Lab</a>
     </nav>
-    <div class="nav-right">
-      <div class="lang" aria-label="Languages">
-        <a class="active" href="index.html">EN</a> &nbsp;|&nbsp;
-        <a href="#" data-lang-pending="French">FR</a> &nbsp;|&nbsp;
-        <a href="#" data-lang-pending="Hebrew">HE</a>
-      </div>
-      <img class="logo" src="assets/jy6-logo-purple.png" alt="JY6 logo">
-    </div>
-  </div>
+    <div class="nav-right"></div>
+</div>
 </header>
 
 <main>
@@ -38,16 +32,10 @@
       <div class="hero-copy">
         <h1>Turning AI into<br><span>real-world solutions</span></h1>
         <p>I design, build and productionize AI systems — from LLM agents and RAG pipelines to secure, reliable and user-friendly applications.</p>
+        <div class="credibility-line">Formerly NLP Engineer at Apple Siri International · Computer Engineer, Technion</div>
         <a class="cta" href="projects.html">View my projects <span>→</span></a>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="planet-wrap">
-          <div class="ring"></div>
-          <div class="planet"></div>
-          <div class="horizon"></div>
-          <img class="logo-water" src="assets/jy6-logo-purple.png" alt="">
-        </div>
-      </div>
+      <div class="hero-art hero-planet-water" aria-hidden="true"><img src="assets/hero-planet-water.png" alt=""></div>
     </div>
   </section>
 
@@ -73,42 +61,15 @@
       <div class="feature-copy">
         <div class="kicker">Featured project</div>
         <h2>WhatsApp AI Intake System</h2>
-        <p>An automated intake workflow for car accident reports, built with FastAPI, PostgreSQL and an LLM agent. It collects key information, validates data and routes cases to a human when needed — fast, reliable and ready for production.</p>
-        <a class="outline-btn" href="shami.html">View project details <span>→</span></a>
+        <p>A production-oriented intake workflow for vehicle appraisal cases. Structured fields keep the flow reliable; AI is used where language understanding adds value — interpreting free text, creating structured enrichment and supporting human review.</p>
+        <a class="outline-btn" href="shami.html">View case study <span>→</span></a>
       </div>
-      <div class="phone-wrap">
-<div class="phone" aria-label="Shami WhatsApp AI intake conversation mockup">
-  <div class="screen">
-    <div class="chat-head">
-      <div class="avatar">S</div>
-      <div><b>Shami</b><span>AI accident assistant</span></div>
-    </div>
-    <div class="chat-body">
-      <div class="bubble bot">Hi, I'm Shami, your AI accident assistant. I'll guide you through a few quick steps and create a structured case draft.</div>
-      <div class="bubble bot">What type of accident was it?</div>
-      <div class="quick"><span>Rear-end</span><span>Side collision</span><span>Hit & run</span></div>
-      <div class="bubble user">Rear-end</div>
-      <div class="bubble bot">When and where did it happen?</div>
-      <div class="bubble user">Today · 17:30 · Haifa</div>
-      <div class="bubble bot">Thanks — required fields validated. I've prepared a case draft and flagged photos as the next step.</div>
-      <div class="summary">
-        <div class="summary-top"><b>AI Case Draft</b><span class="badge">Ready for review</span></div>
-        <dl>
-          <dt>Type</dt><dd>Rear-end collision</dd>
-          <dt>Time</dt><dd>Today · 17:30</dd>
-          <dt>Location</dt><dd>Haifa</dd>
-          <dt>Next</dt><dd>Upload photos</dd>
-        </dl>
-      </div>
-    </div>
-    <div class="chat-input">Message Shami…</div>
-  </div>
-</div>
-</div>
-      <div class="project-points">
-        <div class="point"><div class="point-icon">≡</div><div><h3>Natural conversation flow</h3><p>Short, structured interactions that keep the user moving.</p></div></div>
-        <div class="point"><div class="point-icon">▣</div><div><h3>Structured data & validation</h3><p>Turns responses into validated fields instead of free-form chat.</p></div></div>
-        <div class="point"><div class="point-icon">↗</div><div><h3>Human handoff</h3><p>Routes complex or incomplete cases to a person when needed.</p></div></div>
+      <div class="featured-system" aria-label="Shami system flow">
+        <div class="system-step"><span>01</span><b>Structured + unstructured intake</b><p>Guided fields, documents and one free-text incident description.</p></div>
+        <div class="system-arrow">→</div>
+        <div class="system-step"><span>02</span><b>AI enrichment</b><p>The free-text description is normalized into schema-validated case context.</p></div>
+        <div class="system-arrow">→</div>
+        <div class="system-step"><span>03</span><b>Human review</b><p>The office receives a clean case draft, missing-document status and review flags.</p></div>
       </div>
     </div>
   </section>
@@ -119,25 +80,10 @@
         <div class="kicker">Selected projects</div>
         <a href="projects.html">View all projects →</a>
       </div>
-      <div class="cards">
-        <a class="project-card" href="projects.html#red-team">
-          <div class="card-icon">✓</div>
-          <h3>AI Red Team Lab</h3>
-          <p>Adversarial testing and safety evaluations for LLM applications and agents.</p>
-          <span class="card-arrow">→</span>
-        </a>
-        <a class="project-card" href="projects.html#evals">
-          <div class="card-icon">▥</div>
-          <h3>LLM Evaluation Lab</h3>
-          <p>Automated testing, measurable quality, benchmarking and monitoring.</p>
-          <span class="card-arrow">→</span>
-        </a>
-        <a class="project-card" href="projects.html#agentic">
-          <div class="card-icon">◇</div>
-          <h3>Agentic AI / MCP Sandbox</h3>
-          <p>Tool use, orchestration and real-world agent workflow design.</p>
-          <span class="card-arrow">→</span>
-        </a>
+      <div class="cards image-cards">
+        <a class="image-card" href="red-team.html"><img src="assets/card-red-approved.png" alt="AI Red Team Lab — adversarial testing and safety evaluations for LLM applications"></a>
+        <a class="image-card" href="llm-evaluation.html"><img src="assets/card-eval-approved.png" alt="LLM Evaluation Lab — automated testing, benchmarking and model analysis"></a>
+        <a class="image-card" href="agentic-ai.html"><img src="assets/card-agent-approved.png" alt="Agentic AI / MCP Sandbox — real-world agent workflows"></a>
       </div>
     </div>
   </section>
@@ -145,7 +91,7 @@
 
 <footer class="footer">
   <div class="wrap footer-in">
-    <span>© 2026 Joyce Bessis</span>
+    <span>© 2026 Joyce Bessis · <a href="https://github.com/jb6" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:joyce.bessis@gmail.com">Email</a></span>
     <span>Independent Applied AI Engineer · AI systems · Evaluation · Reliability</span>
   </div>
 </footer>

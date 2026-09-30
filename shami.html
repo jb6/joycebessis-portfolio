@@ -1,102 +1,133 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Case study: Shami, a production-oriented WhatsApp AI intake system for vehicle appraisal workflows with structured and unstructured intake, AI enrichment, validation and a human operations dashboard.">
   <meta name="robots" content="noindex,nofollow">
-  <title>WhatsApp AI Intake System — Joyce Bessis</title><link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#070913">
+  <title>Shami — WhatsApp AI Intake System — Joyce Bessis</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="projects">
-
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="name" href="index.html">Joyce Bessis</a>
+    <a class="name brand-lockup" href="index.html"><span class="brand-name">Joyce Bessis</span><img class="header-logo" src="assets/jy6-logo-purple.png" alt="JY6 logo"></a>
     <nav class="menu" aria-label="Primary">
       <a href="index.html" data-nav="home">Home</a>
       <a href="projects.html" data-nav="projects">Projects</a>
       <a href="experience.html" data-nav="experience">Experience</a>
       <a href="skills.html" data-nav="skills">Skills</a>
+      <a href="creative-lab.html" data-nav="creative">Creative Lab</a>
     </nav>
-    <div class="nav-right">
-      <div class="lang" aria-label="Languages">
-        <a class="active" href="index.html">EN</a> &nbsp;|&nbsp;
-        <a href="#" data-lang-pending="French">FR</a> &nbsp;|&nbsp;
-        <a href="#" data-lang-pending="Hebrew">HE</a>
-      </div>
-      <img class="logo" src="assets/jy6-logo-purple.png" alt="JY6 logo">
-    </div>
+    <div class="nav-right"></div>
   </div>
 </header>
 
 <main>
-  <section class="page-hero"><div class="wrap">
-    <div class="kicker">Case study · in progress</div>
-    <h1>WhatsApp AI<br>Intake System.</h1>
-    <p>A short, controlled intake experience for a real professional-services workflow — designed to collect structured information, validate it, store it reliably and escalate to a human when needed.</p>
-  </div></section>
+  <section class="shami13-hero">
+    <div class="wrap shami13-hero-grid">
+      <div class="shami13-copy">
+        <a class="lab-back" href="projects.html">← Projects</a>
+        <div class="kicker">Case study · V1 in progress</div>
+        <h1>Shami —<br>WhatsApp AI Intake System</h1>
+        <p>A production-oriented AI intake assistant for vehicle appraisal and accident cases. It captures structured and unstructured input, validates required information, uses AI to interpret free text, and prepares cases for human review.</p>
+        <div class="shami13-tags"><span>FastAPI</span><span>PostgreSQL</span><span>WhatsApp Business</span><span>Structured LLM output</span></div>
+      </div>
 
-  <section class="content-section"><div class="wrap grid-2">
-    <article class="panel">
-      <h2>Product goal</h2>
-      <p>Keep the client-side interaction short — roughly 5 to 7 interactions — while making the workflow behind it robust. Most responses are structured buttons or fields, with very limited free text.</p>
-      <div class="tag-row"><span class="tag">Short flow</span><span class="tag">Structured intake</span><span class="tag">Human handoff</span></div>
-    </article>
-    <article class="panel">
-      <h2>Architecture</h2>
-      <p>Python/FastAPI service, PostgreSQL from day one, environment-based configuration, separated storage layer and a Docker-friendly structure designed to migrate to Google Cloud without rewriting the product.</p>
-      <div class="tag-row"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker-ready</span><span class="tag">Cloud-ready</span></div>
-    </article>
-    <article class="panel">
-      <h2>AI role</h2>
-      <p>The AI layer is used where it adds value: extracting structured information from limited natural-language inputs, checking completeness and producing a clean case draft. Deterministic business rules remain outside the model.</p>
-      <div class="tag-row"><span class="tag">Structured outputs</span><span class="tag">Function calling</span><span class="tag">Validation</span></div>
-    </article>
-    <article class="panel">
-      <h2>Reliability & safety</h2>
-      <p>The system is being designed around validation, fallbacks, retries, explicit conversation state and a safe human handoff rather than allowing an unconstrained chatbot to improvise.</p>
-      <div class="tag-row"><span class="tag">Fallbacks</span><span class="tag">Retries</span><span class="tag">State</span><span class="tag">Human review</span></div>
-    </article>
-  </div></section>
-
-  <section class="content-section"><div class="wrap" style="display:grid;place-items:center">
-    
-<div class="phone" aria-label="Shami WhatsApp AI intake conversation mockup">
-  <div class="screen">
-    <div class="chat-head">
-      <div class="avatar">S</div>
-      <div><b>Shami</b><span>AI accident assistant</span></div>
-    </div>
-    <div class="chat-body">
-      <div class="bubble bot">Hi, I'm Shami, your AI accident assistant. I'll guide you through a few quick steps and create a structured case draft.</div>
-      <div class="bubble bot">What type of accident was it?</div>
-      <div class="quick"><span>Rear-end</span><span>Side collision</span><span>Hit & run</span></div>
-      <div class="bubble user">Rear-end</div>
-      <div class="bubble bot">When and where did it happen?</div>
-      <div class="bubble user">Today · 17:30 · Haifa</div>
-      <div class="bubble bot">Thanks — required fields validated. I've prepared a case draft and flagged photos as the next step.</div>
-      <div class="summary">
-        <div class="summary-top"><b>AI Case Draft</b><span class="badge">Ready for review</span></div>
-        <dl>
-          <dt>Type</dt><dd>Rear-end collision</dd>
-          <dt>Time</dt><dd>Today · 17:30</dd>
-          <dt>Location</dt><dd>Haifa</dd>
-          <dt>Next</dt><dd>Upload photos</dd>
-        </dl>
+      <div class="shami13-phone-stage" aria-label="Shami conversation preview">
+        <div class="shami13-phone">
+          <div class="shami13-island"></div>
+          <div class="shami13-screen">
+            <div class="shami13-appbar">
+              <div class="shami13-avatar">S</div>
+              <div><strong>Shami</strong><small>AI intake assistant</small></div>
+              <span>•••</span>
+            </div>
+            <div class="shami13-chat">
+              <div class="shami13-bubble bot">Hi — I’ll help open your case in a few short steps.</div>
+              <div class="shami13-bubble bot">Briefly describe what happened.</div>
+              <div class="shami13-bubble user">I was stopped at a red light when another car hit me from behind. The rear bumper was damaged.</div>
+              <div class="shami13-bubble bot">Thanks, I’ve saved our description. Now I will collect your details.</div>
+              <div class="shami13-bubble bot short">What is your name?</div>
+            </div>
+            <div class="shami13-compose">Message Shami… <span>↑</span></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="chat-input">Message Shami…</div>
-  </div>
-</div>
+  </section>
 
-  </div></section>
+  <section class="shami13-how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <div class="shami13-steps">
+        <article>
+          <span class="step-no">01</span>
+          <div class="step-icon">☰</div>
+          <div><h3>Structured + unstructured intake</h3><p>Short guided questions collect required fields, while free text lets the customer describe the incident naturally.</p></div>
+        </article>
+        <article>
+          <span class="step-no">02</span>
+          <div class="step-icon">◫</div>
+          <div><h3>Validation + AI enrichment</h3><p>Business rules validate required data. AI interprets free text and turns it into structured, reviewable context.</p></div>
+        </article>
+        <article>
+          <span class="step-no">03</span>
+          <div class="step-icon">↗</div>
+          <div><h3>Operations dashboard</h3><p>The human team receives a clear dashboard with every case, status, completeness and next action.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shami13-dashboard-section">
+    <div class="wrap">
+      <div class="shami13-section-head">
+        <div><div class="kicker">Operations dashboard</div><h2>From conversation to case operations.</h2></div>
+        <p>Every WhatsApp conversation becomes a structured case the team can review, track and move forward quickly.</p>
+      </div>
+
+      <div class="shami13-dashboard">
+        <div class="dash-topbar">
+          <div class="dash-brand"><span>⌁</span><strong>Shami</strong><small>Cases dashboard · sample data</small></div>
+          <div class="dash-actions"><span class="dash-search">Search cases…</span><span class="dash-filter">Last 30 days ▾</span></div>
+        </div>
+        <div class="dash-table" role="table" aria-label="Sample Shami operations dashboard">
+          <div class="dash-row dash-head" role="row">
+            <div>Case</div><div>Customer</div><div>Vehicle</div><div>Status</div><div>Completeness</div><div>Next action</div>
+          </div>
+          <div class="dash-row" role="row">
+            <div><b>#AC-1042</b></div><div>Daniel K.</div><div>Toyota Corolla 2022</div><div><span class="pill ready">Ready for review</span></div><div><b>100%</b><span class="bar"><i style="width:100%"></i></span></div><div>Review case</div>
+          </div>
+          <div class="dash-row" role="row">
+            <div><b>#AC-1041</b></div><div>Sarah M.</div><div>Honda Civic 2021</div><div><span class="pill missing">Missing photos</span></div><div><b>60%</b><span class="bar"><i style="width:60%"></i></span></div><div>Request photos</div>
+          </div>
+          <div class="dash-row" role="row">
+            <div><b>#AC-1040</b></div><div>Omar R.</div><div>Tesla Model 3 2023</div><div><span class="pill progress">In progress</span></div><div><b>80%</b><span class="bar"><i style="width:80%"></i></span></div><div>Validate details</div>
+          </div>
+          <div class="dash-row" role="row">
+            <div><b>#AC-1039</b></div><div>Emily T.</div><div>BMW X5 2020</div><div><span class="pill review">Under review</span></div><div><b>100%</b><span class="bar"><i style="width:100%"></i></span></div><div>Follow up</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shami13-proof-grid">
+        <article><span>My role</span><p>Product design, conversation flow, AI workflow design and production-oriented system architecture.</p></article>
+        <article><span>Tech stack</span><p>FastAPI, PostgreSQL, WhatsApp Business API, validation layer, LLM structured enrichment and private media storage.</p></article>
+        <article><span>AI capabilities</span><p>Free-text understanding, structured case summaries and missing-data support. Optional future extension: multimodal photo analysis.</p></article>
+      </div>
+      <div class="shami13-human-note"><strong>Human review stays central.</strong> AI structures and enriches the case; professional judgment and final review remain with the human team.</div>
+    </div>
+  </section>
+
+  <section class="content-section"><div class="wrap"><a class="outline-btn" href="projects.html">← Back to all projects</a></div></section>
 </main>
 
-<footer class="footer">
-  <div class="wrap footer-in">
-    <span>© 2026 Joyce Bessis</span>
-    <span>Independent Applied AI Engineer · AI systems · Evaluation · Reliability</span>
-  </div>
-</footer>
-
+<footer class="footer"><div class="wrap footer-in">
+  <span>© 2026 Joyce Bessis · <a href="https://github.com/jb6" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:joyce.bessis@gmail.com">Email</a></span>
+  <span>Independent Applied AI Engineer · AI systems · Evaluation · Reliability</span>
+</div></footer>
 <script src="script.js"></script>
 </body>
 </html>
