@@ -51,7 +51,7 @@ The site remains `noindex` while under review.
 
 
 
-## v1.3.13 — Shami simplification
+## v1.2 — Shami simplification
 - Simplified Shami to the essentials: one conversation preview, three-step workflow, one operations dashboard and three concise proof cards.
 - Added the conversation step: “What is your name?” after “Now I will collect your details.”
 - Removed the overlapping case-draft card and the longer secondary sections.
