@@ -1,4 +1,4 @@
-# Joyce Bessis Portfolio — v1.3.11 — 2026-09-29
+# Joyce Bessis Portfolio — v1.2 — 2026-09-29
 
 Professional portfolio pass across all pages.
 
@@ -37,7 +37,7 @@ English only while the site is still evolving. French and Hebrew should be added
 The site remains `noindex` while under review.
 
 
-## v1.3.11 — restrained professional pass
+## v1.2 — restrained professional pass
 - Reduced headline scale across the entire site.
 - Reduced decorative glow, borders, shadows and card density.
 - Tightened navigation, spacing and typography for a more senior / editorial engineering portfolio feel.
@@ -45,10 +45,10 @@ The site remains `noindex` while under review.
 - Shami remains the flagship case study, with the dashboard and optional AI capabilities retained.
 
 
-## v1.3.13 — 2026-09-30
+## v1.2 — 2026-09-30
 - Reworked only the Shami operations dashboard into a portfolio-grade multi-case cockpit.
 - Added overview KPIs, active incidents table, completeness, document counts, review status, ownership and a priority queue.
-- All other pages and sections remain unchanged from v1.3.11.
+
 
 
 ## v1.3.13 — Shami simplification
