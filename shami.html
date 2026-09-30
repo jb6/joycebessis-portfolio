@@ -13,14 +13,18 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="name brand-lockup" href="index.html"><span class="brand-name">Joyce Bessis</span><img class="header-logo" src="assets/jy6-logo-purple.png" alt="JY6 logo"></a>
-    <nav class="menu" aria-label="Primary">
+    <nav class="menu" id="primary-menu" aria-label="Primary">
       <a href="index.html" data-nav="home">Home</a>
       <a href="projects.html" data-nav="projects">Projects</a>
       <a href="experience.html" data-nav="experience">Experience</a>
       <a href="skills.html" data-nav="skills">Skills</a>
       <a href="creative-lab.html" data-nav="creative">Creative Lab</a>
     </nav>
-    <div class="nav-right"></div>
+    <div class="nav-right">
+      <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-controls="primary-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -50,6 +54,7 @@
               <div class="shami13-bubble user">I was stopped at a red light when another car hit me from behind. The rear bumper was damaged.</div>
               <div class="shami13-bubble bot">Thanks, I’ve saved our description. Now I will collect your details.</div>
               <div class="shami13-bubble bot short">What is your name?</div>
+              <div class="shami13-bubble user short">Daniel Karman</div>
             </div>
             <div class="shami13-compose">Message Shami… <span>↑</span></div>
           </div>
@@ -88,28 +93,71 @@
         <p>Every WhatsApp conversation becomes a structured case the team can review, track and move forward quickly.</p>
       </div>
 
-      <div class="shami13-dashboard">
-        <div class="dash-topbar">
-          <div class="dash-brand"><span>⌁</span><strong>Shami</strong><small>Cases dashboard · sample data</small></div>
-          <div class="dash-actions"><span class="dash-search">Search cases…</span><span class="dash-filter">Last 30 days ▾</span></div>
-        </div>
-        <div class="dash-table" role="table" aria-label="Sample Shami operations dashboard">
-          <div class="dash-row dash-head" role="row">
-            <div>Case</div><div>Customer</div><div>Vehicle</div><div>Status</div><div>Completeness</div><div>Next action</div>
+      <div class="shami13-dashboard shami-console" aria-label="Sample Shami case review dashboard">
+        <aside class="shami-console-sidebar">
+          <div class="shami-console-brand"><span class="shami-mark">S</span><div><strong>Shami</strong><small>Case review</small></div></div>
+          <nav class="shami-console-nav" aria-label="Dashboard sample navigation">
+            <span class="active">Cases <b>12</b></span>
+            <span>Review queue <b>5</b></span>
+            <span>Customers</span>
+            <span>Analytics</span>
+          </nav>
+        </aside>
+
+        <section class="shami-console-list">
+          <div class="shami-console-list-head">
+            <div><strong>Cases</strong><small>Last 30 days</small></div>
+            <span class="shami-console-search">Search cases…</span>
           </div>
-          <div class="dash-row" role="row">
-            <div><b>#AC-1042</b></div><div>Daniel K.</div><div>Toyota Corolla 2022</div><div><span class="pill ready">Ready for review</span></div><div><b>100%</b><span class="bar"><i style="width:100%"></i></span></div><div>Review case</div>
+          <div class="shami-case-row selected">
+            <span class="case-icon">▣</span><div><strong>#AC-1042</strong><small>Daniel K. · Toyota Corolla 2022</small></div><span class="case-status ready">Ready for review</span>
           </div>
-          <div class="dash-row" role="row">
-            <div><b>#AC-1041</b></div><div>Sarah M.</div><div>Honda Civic 2021</div><div><span class="pill missing">Missing photos</span></div><div><b>60%</b><span class="bar"><i style="width:60%"></i></span></div><div>Request photos</div>
+          <div class="shami-case-row">
+            <span class="case-icon">▣</span><div><strong>#AC-1041</strong><small>Sarah M. · Honda Civic 2021</small></div><span class="case-status missing">Missing docs</span>
           </div>
-          <div class="dash-row" role="row">
-            <div><b>#AC-1040</b></div><div>Omar R.</div><div>Tesla Model 3 2023</div><div><span class="pill progress">In progress</span></div><div><b>80%</b><span class="bar"><i style="width:80%"></i></span></div><div>Validate details</div>
+          <div class="shami-case-row">
+            <span class="case-icon">▣</span><div><strong>#AC-1040</strong><small>Omar R. · Tesla Model 3 2023</small></div><span class="case-status progress">In progress</span>
           </div>
-          <div class="dash-row" role="row">
-            <div><b>#AC-1039</b></div><div>Emily T.</div><div>BMW X5 2020</div><div><span class="pill review">Under review</span></div><div><b>100%</b><span class="bar"><i style="width:100%"></i></span></div><div>Follow up</div>
+          <div class="shami-case-row">
+            <span class="case-icon">▣</span><div><strong>#AC-1039</strong><small>Emily T. · BMW X5 2020</small></div><span class="case-status ready">Ready for review</span>
           </div>
-        </div>
+          <div class="shami-case-row">
+            <span class="case-icon">▣</span><div><strong>#AC-1038</strong><small>Michael B. · Honda Accord 2019</small></div><span class="case-status missing">Missing docs</span>
+          </div>
+        </section>
+
+        <section class="shami-console-detail">
+          <div class="shami-console-detail-head">
+            <div><strong>#AC-1042</strong><small>Daniel K. · Toyota Corolla 2022 · 2h ago</small></div>
+            <span class="case-status ready">Ready for review</span>
+          </div>
+          <div class="shami-detail-tabs"><span class="active">Overview</span><span>Conversation</span><span>Documents</span><span>History</span></div>
+          <div class="shami-summary-card">
+            <div class="shami-summary-title"><strong>AI summary</strong><span>reviewable</span></div>
+            <p>Rear-end collision while stopped at a red light. Rear bumper damage reported. Customer requests vehicle appraisal and repair support.</p>
+          </div>
+          <div class="shami-detail-grid">
+            <div>
+              <h4>Key details</h4>
+              <dl>
+                <div><dt>Customer</dt><dd>Daniel Karman</dd></div>
+                <div><dt>Vehicle</dt><dd>Toyota Corolla 2022</dd></div>
+                <div><dt>Incident date</dt><dd>Mar 14, 2024</dd></div>
+                <div><dt>Location</dt><dd>San Francisco, CA</dd></div>
+              </dl>
+            </div>
+            <div>
+              <h4>Documents <span>3 / 4</span></h4>
+              <ul class="shami-doc-list">
+                <li><span>Damage photos</span><b>3 files</b><i>✓</i></li>
+                <li><span>Police report</span><b>Not provided</b><i>○</i></li>
+                <li><span>Driver’s license</span><b>Provided</b><i>✓</i></li>
+                <li><span>Insurance info</span><b>Provided</b><i>✓</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="shami-detail-actions"><button type="button">Add note</button><button type="button" class="primary">Move to human review</button></div>
+        </section>
       </div>
 
       <div class="shami13-proof-grid">

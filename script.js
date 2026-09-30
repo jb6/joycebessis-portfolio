@@ -25,4 +25,37 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = `mailto:joyce.bessis@gmail.com?subject=${subject}&body=${body}`;
     });
   }
+
+  const mobileToggle = document.querySelector('.mobile-toggle');
+  const primaryMenu = document.querySelector('#primary-menu');
+  if (mobileToggle && primaryMenu) {
+    const closeMenu = () => {
+      primaryMenu.classList.remove('is-open');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      mobileToggle.setAttribute('aria-label', 'Open navigation');
+    };
+    const openMenu = () => {
+      primaryMenu.classList.add('is-open');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      mobileToggle.setAttribute('aria-label', 'Close navigation');
+    };
+
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    primaryMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('click', (e) => {
+      if (!primaryMenu.contains(e.target) && !mobileToggle.contains(e.target)) closeMenu();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1050) closeMenu();
+    });
+  }
+
 });
